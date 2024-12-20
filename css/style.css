@@ -86,8 +86,8 @@ a {
 .content-text {
   background: #fff;
   padding: 2.4rem;
-  width: 31vw;
-  height: 17.75rem;
+  width: 64%;
+  height: 95.2%;
   position: relative;
   right: 5.8rem;
   border-top-right-radius: 0.5rem;
@@ -103,8 +103,8 @@ a {
 /* Photo styling */
 
 .photo img {
-  width: 24vw;
-  height: 36.2vh;
+  width: 24%;
+  height: 36.2%;
   opacity: 0.9;
   position: absolute;
   left: 22.5rem;
@@ -172,7 +172,7 @@ a {
   align-items: center;
   gap: 20px;
   padding: 1.1rem;
-  width: 17vw;
+  width: 17%;
   border-radius: 0.5rem;
   position: absolute;
   bottom: 24.5rem;
