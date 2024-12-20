@@ -1,0 +1,304 @@
+:root {
+  /* Primary colors */
+  --color-Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --color-Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --color-Grayish-Blue: hsl(212, 23%, 69%);
+  --color-Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+  /* Font family */
+  --Font-family: "Manrope", arial, Helvetica;
+
+  /* Font size */
+  --Font-size: 13px;
+
+  /* Font weight */
+  --Font-weight-500: 500;
+  --Font-weight-700: 700;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.4;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--Font-family);
+  font-size: var(--Font-size);
+  background: var(--color-Light-Grayish-Blue);
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+  line-height: 1.6;
+  font-weight: var(--Font-weight-500);
+  color: var(--color-Desaturated-Dark-Blue);
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: wrap;
+  font-weight: var(--Font-weight-700);
+  color: var(--color-Very-Dark-Grayish-Blue);
+}
+a {
+  text-decoration: none;
+}
+
+/* Content styling */
+.content {
+  margin: 12rem auto;
+  /* display: flex;
+  justify-content: center;
+  width: 800px;
+  position: relative;
+  left: 34px; */
+
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.content-text {
+  background: #fff;
+  padding: 2.4rem;
+  width: 31vw;
+  height: 17.75rem;
+  position: relative;
+  right: 5.8rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.content-text,
+.photo img,
+.social {
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Photo styling */
+
+.photo img {
+  width: 24vw;
+  height: 36.2vh;
+  opacity: 0.9;
+  position: absolute;
+  left: 22.5rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+/* Text styling */
+
+.text h1 {
+  font-size: 1.3rem;
+}
+
+.text p {
+  margin-top: 1rem;
+}
+
+/* Profil styling */
+
+.profil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.profil-avatar {
+  display: flex;
+  align-items: center;
+}
+
+.profil-avatar img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.profil-name {
+  margin-left: 1rem;
+}
+
+/* Share area styling */
+
+.share-icon {
+  background: var(--color-Light-Grayish-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.share-icon:hover {
+  background-color: var(--color-Grayish-Blue);
+}
+
+/* Social icon */
+
+.social {
+  background: var(--color-Very-Dark-Grayish-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 1.1rem;
+  width: 17vw;
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: 24.5rem;
+  left: 57rem;
+  display: none;
+}
+
+.social::before {
+  content: " ";
+  position: absolute;
+  bottom: -12px;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 14px solid hsl(217, 19%, 35%);
+}
+
+.social h5 {
+  font-size: 0.8rem;
+  font-weight: var(--Font-weight-500);
+  color: var(--color-Grayish-Blue);
+  text-transform: uppercase;
+  letter-spacing: 0.3dvw;
+}
+
+.social img {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+}
+
+/* Media query */
+
+@media (min-width: 20rem) and (max-width: 42.5rem) {
+
+  .content {
+    width: auto;
+    margin: 4rem auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  /* Picture styling */
+  .photo img {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    position: absolute;
+    left: 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+  }
+
+  /* Text content styling */
+  .content-text {
+    width: auto;
+    height: auto;
+    position: relative;
+    bottom: 2rem;
+    right: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  /* Profil styling */
+  .profil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  /* Social icon */
+.social {
+  justify-content: flex-start;
+  gap: 1.9rem;
+  padding: 1.1rem;
+  width: 100%;
+  height: 6rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  position: relative;
+  bottom: 12rem;
+  left: 0;
+  display: none;
+}
+
+.social h5 {
+  font-size: 1.3rem;
+  font-weight: var(--Font-weight-500);
+  color: var(--color-Grayish-Blue);
+  text-transform: uppercase;
+  letter-spacing: 0.3dvw;
+}
+
+.social img {
+  width: 2rem;
+}
+
+.social::before {
+  display: none;
+}
+  /* Share area styling */
+.share-icon {
+  background: var(--color-Light-Grayish-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  position: relative;
+  top: 0.8rem;
+  z-index: 1;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.share-icon:hover {
+  background-color: var(--color-Grayish-Blue);
+}
+}
+
